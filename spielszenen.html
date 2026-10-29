@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spielszenen | Niklas Bergner</title>
+  <meta name="description" content="Videoszenen von Niklas Bergner – sortiert nach Spiel, Gegner und Datum.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top" class="page-inner">
+
+<header class="site-header">
+  <a class="brand" href="index.html#top"><span class="brand-mark">NB</span>Niklas Bergner</a>
+  <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav">Menü</button>
+  <nav id="nav" class="nav">
+    <a href="index.html#profil">Profil</a>
+    <a href="index.html#karriere">Karriere</a>
+    <a href="index.html#daten">Daten</a>
+    <a href="index.html#galerie">Impressionen</a>
+    <a href="spielszenen.html" aria-current="page">Spielszenen</a>
+    <button type="button" class="btn btn-small" data-open-contact>Anfrage</button>
+  </nav>
+</header>
+
+<main class="section">
+  <div class="wrap">
+    <a class="back" href="index.html#galerie">Zurück zur Startseite</a>
+    <h1 class="page-title">Spielszenen</h1>
+    <p class="lead" id="summary"></p>
+    <p class="note">Sortiert nach Gegner und Datum</p>
+
+    <div class="filters" aria-label="Filtern">
+      <label>Mannschaften
+        <select id="filter-team"><option value="">Alle</option></select>
+      </label>
+      <label>Liga
+        <select id="filter-league"><option value="">Alle</option></select>
+      </label>
+    </div>
+
+    <div id="matches" class="matches"></div>
+    <p id="empty" class="note" hidden>Keine Spiele für diese Auswahl.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <strong>Niklas Bergner</strong>
+      <p>Sechser · ASV Weisendorf</p>
+    </div>
+    <div>
+      <strong>Seite</strong>
+      <a href="index.html#profil">Profil</a>
+      <a href="index.html#karriere">Karriere</a>
+      <a href="index.html#daten">Daten</a>
+      <a href="index.html#galerie">Impressionen</a>
+      <a href="spielszenen.html">Spielszenen</a>
+      <a href="#" data-open-contact>Kontakt</a>
+    </div>
+    <div>
+      <strong>Profile</strong>
+      <a href="https://www.transfermarkt.de/niklas-bergner/profil/spieler/958834" target="_blank" rel="noopener">Transfermarkt</a>
+      <a href="https://www.fupa.net/player/niklas-bergner-1920566" target="_blank" rel="noopener">FuPa</a>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 Niklas Bergner. Datenstand Oktober 2026.</span>
+    <a href="#top">Nach oben</a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/spielszenen.js"></script>
+</body>
+</html>
