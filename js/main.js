@@ -28,9 +28,10 @@ if (ageEl) {
 }
 
 // ---------- Anfrage-Fenster ----------
-// Die Anfragen gehen über FormSubmit (formsubmit.co) an diese Adresse.
-// Beim allerersten Absenden schickt FormSubmit eine Bestätigungs-Mail an diese
-// Adresse – dort einmal auf "Activate" klicken, danach kommen alle Anfragen an.
+// Die Anfragen gehen über Formspree an deine E-Mail-Adresse.
+// Hier deine persönliche Formspree-URL eintragen:
+const FORMSPREE_URL = 'https://formspree.io/f/xjyyopde';
+// Nur für den Notfall-Link, falls das Senden nicht klappt:
 const CONTACT_EMAIL = 'niiikkbuild@gmail.com';
 
 const dlg = document.createElement('dialog');
@@ -122,19 +123,16 @@ form.addEventListener('submit', async (e) => {
   status.textContent = '';
 
   try {
-    const res = await fetch('https://formsubmit.co/ajax/' + CONTACT_EMAIL, {
+    const res = await fetch(FORMSPREE_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
         name, email, Verein: org || '–', Nachricht: message,
         _subject: 'Neue Anfrage über die Website von ' + name,
-        _replyto: email,
-        _template: 'table',
-        _captcha: 'false'
+        _replyto: email
       })
     });
-    const out = await res.json().catch(() => ({}));
-    if (!res.ok || out.success === 'false' || out.success === false) throw new Error('send failed');
+    if (!res.ok) throw new Error('send failed');
     form.reset();
     formView.hidden = true;
     doneView.hidden = false;
