@@ -68,11 +68,11 @@ const MATCHES = [
       ["Flanke", '06-flanke.mp4'],
       ["Schuss geblockt", '07-schuss-geblockt.mp4']
     ] },
-  { id: '2025-08-10-sv-tennenlohe-1fc-herzogenaurach', date: "2025-08-10", title: 'SV Tennenlohe – 1. FC Herzogenaurach', league: 'Testspiel',
+  { id: '2025-08-10-sv-tennenlohe-1fc-herzogenaurach', date: "2025-08-10", title: 'SV Tennenlohe – 1. FC Herzogenaurach', league: 'Bezirksliga Mittelfr. Nord',
     scenes: [
       ["Gute Bewegung", '01-gute-bewegung.mp4']
     ] },
-  { id: '2025-07-17-spvgg-erlangen-1fc-herzogenaurach', date: "2025-07-17", title: 'SpVgg Erlangen – 1. FC Herzogenaurach', league: 'Testspiel',
+  { id: '2025-07-17-spvgg-erlangen-1fc-herzogenaurach', date: "2025-07-17", title: 'SpVgg Erlangen – 1. FC Herzogenaurach', league: 'Bezirksliga Mittelfr. Nord',
     scenes: [
       ["Torschuss mit links", '01-torschuss-mit-links.mp4'],
       ["Tor von außerhalb", '02-tor-von-ausserhalb.mp4'],
@@ -89,7 +89,7 @@ const MATCHES = [
       ["Dribbling im 16er und Vorlage zum Torschuss", '02-dribbling-im-16er-und-vorlage-zum-torschuss.mp4'],
       ["Torschuss", '03-torschuss.mp4']
     ] },
-  { id: '2024-08-04-tsv-wendelstein-1fc-herzogenaurach', date: "2024-08-04", title: 'TSV Wendelstein – 1. FC Herzogenaurach', league: 'Testspiel',
+  { id: '2024-08-04-tsv-wendelstein-1fc-herzogenaurach', date: "2024-08-04", title: 'TSV Wendelstein – 1. FC Herzogenaurach', league: 'Bezirksliga Mittelfr. Nord',
     scenes: [
       ["Steckpass in den Lauf", '01-steckpass-in-den-lauf.mp4'],
       ["Steckpass in den Lauf II", '02-steckpass-in-den-lauf-ii.mp4'],
@@ -100,7 +100,7 @@ const MATCHES = [
       ["Aufgedreht, Dribbling, Flanke", '07-aufgedreht-dribbling-flanke.mp4'],
       ["Heber hinter die Innenverteidigung", '08-heber-hinter-die-innenverteidigung.mp4']
     ] },
-  { id: '2024-07-28-spvgg-erlangen-1fc-herzogenaurach', date: "2024-07-28", title: 'SpVgg Erlangen – 1. FC Herzogenaurach', league: 'Testspiel',
+  { id: '2024-07-28-spvgg-erlangen-1fc-herzogenaurach', date: "2024-07-28", title: 'SpVgg Erlangen – 1. FC Herzogenaurach', league: 'Bezirksliga Mittelfr. Nord',
     scenes: [
       ["Gute Bewegung", '01-gute-bewegung.mp4'],
       ["Kurzer Antritt und Balleroberung", '02-kurzer-antritt-und-balleroberung.mp4'],
@@ -109,7 +109,7 @@ const MATCHES = [
       ["Kurzer Chip am Gegner vorbei", '05-kurzer-chip-am-gegner-vorbei.mp4'],
       ["Angriffsaktion mit Kevin", '06-angriffsaktion-mit-kevin.mp4']
     ] },
-  { id: '2024-07-20-sv-hersbruck-1fc-herzogenaurach', date: "2024-07-20", title: 'SV Hersbruck – 1. FC Herzogenaurach', league: 'Testspiel',
+  { id: '2024-07-20-sv-hersbruck-1fc-herzogenaurach', date: "2024-07-20", title: 'SV Hersbruck – 1. FC Herzogenaurach', league: 'Bezirksliga Mittelfr. Nord',
     scenes: [
       ["Press-Dribbling im Mittelfeld", '01-press-dribbling-im-mittelfeld.mp4'],
       ["Dribbling", '02-dribbling.mp4'],
@@ -124,11 +124,11 @@ const MATCHES = [
       ["Doppelpass mit Denk", '03-doppelpass-mit-denk.mp4'],
       ["Solo, Doppelpass, Tor", '04-solo-doppelpass-tor.mp4']
     ] },
-  { id: '2024-05-15-moegeldorf-1fc-herzogenaurach', date: "2024-05-15", title: 'Mögeldorf – 1. FC Herzogenaurach', league: 'Landesliga Bayern Nordost',
+  { id: '2024-05-15-moegeldorf-1fc-herzogenaurach', date: "2024-05-15", title: 'Mögeldorf – 1. FC Herzogenaurach', league: 'Bezirksliga Mittelfr. Nord',
     scenes: [
       ["Starkes Solo", '01-starkes-solo.mp4']
     ] },
-  { id: 'ohne-datum-1fc-herzogenaurach-tsv-buch', date: null, title: '1. FC Herzogenaurach – TSV Buch', league: 'Liga unbekannt',
+  { id: 'ohne-datum-1fc-herzogenaurach-tsv-buch', date: null, title: '1. FC Herzogenaurach – TSV Buch', league: 'Testspiel', note: 'Gegner aus der Landesliga',
     scenes: [
       ["Ballannahme", '01-ballannahme.mp4'],
       ["Press lösen", '02-press-loesen.mp4'],
@@ -140,7 +140,7 @@ const MATCHES = [
       ["Angriff", '08-angriff.mp4'],
       ["Angriff II", '09-angriff-ii.mp4']
     ] },
-  { id: 'ohne-datum-viktoria-erlangen-1fc-herzogenaurach', date: null, title: 'Viktoria Erlangen – 1. FC Herzogenaurach', league: 'Liga unbekannt',
+  { id: 'ohne-datum-viktoria-erlangen-1fc-herzogenaurach', date: null, title: 'Viktoria Erlangen – 1. FC Herzogenaurach', league: 'Pokalspiel',
     scenes: [
       ["Guter Pass", '01-guter-pass.mp4'],
       ["Seitenverlagerung", '02-seitenverlagerung.mp4'],
@@ -150,7 +150,10 @@ const MATCHES = [
       ["Tor", '06-tor.mp4']
     ] }
 ];
-const TEAM = 'Herren I'; // Alle Szenen stammen aus dem Herrenbereich
+// Eigene Vereine stehen im Filter oben, abgesetzt von den Gegnern
+const MY_CLUBS = ['1. FC Herzogenaurach', 'ASV Weisendorf'];
+const LEAGUES = ['Landesliga Bayern Nordost', 'Bezirksliga Mittelfr. Nord', 'Pokalspiel', 'Testspiel'];
+const teams = (m) => m.title.split(' – ');
 
 const list = document.getElementById('matches');
 const empty = document.getElementById('empty');
@@ -166,13 +169,24 @@ const totalScenes = MATCHES.reduce((s, m) => s + m.scenes.length, 0);
 summary.textContent = `${MATCHES.length} Spiele · ${totalScenes} Videos`;
 
 // Filter-Optionen
-teamSel.add(new Option(TEAM, TEAM));
-[...new Set(MATCHES.map((m) => m.league))].forEach((l) => leagueSel.add(new Option(l, l)));
+function addGroup(select, label, values) {
+  const group = document.createElement('optgroup');
+  group.label = label;
+  values.forEach((v) => group.appendChild(new Option(v, v)));
+  select.appendChild(group);
+}
+const opponents = [...new Set(MATCHES.flatMap(teams))]
+  .filter((t) => !MY_CLUBS.includes(t))
+  .sort((a, b) => a.localeCompare(b, 'de'));
+addGroup(teamSel, 'Meine Vereine', MY_CLUBS);
+addGroup(teamSel, 'Gegner', opponents);
+const usedLeagues = new Set(MATCHES.map((m) => m.league));
+LEAGUES.filter((l) => usedLeagues.has(l)).forEach((l) => leagueSel.add(new Option(l, l)));
 
 function render() {
   const team = teamSel.value;
   const league = leagueSel.value;
-  const shown = MATCHES.filter((m) => (!team || team === TEAM) && (!league || m.league === league));
+  const shown = MATCHES.filter((m) => (!team || teams(m).includes(team)) && (!league || m.league === league));
 
   list.innerHTML = '';
   empty.hidden = shown.length > 0;
@@ -185,7 +199,7 @@ function render() {
       <button class="match-toggle" aria-expanded="false" aria-controls="${panelId}">
         <span class="match-date">${fmt(m.date)}</span>
         <span class="match-title">${m.title}</span>
-        <span class="match-meta">${m.league} · ${plural(m.scenes.length, 'Szene', 'Szenen')}</span>
+        <span class="match-meta">${m.league}${m.note ? ` (${m.note})` : ''} · ${plural(m.scenes.length, 'Szene', 'Szenen')}</span>
         <span class="match-action">Szenen</span>
       </button>
       <div class="scenes" id="${panelId}" hidden style="display: none"></div>`;
