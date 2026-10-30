@@ -186,6 +186,7 @@ tfoot td { font-weight: 700; background: var(--turf); border-bottom: 0; }
 .match-action { grid-column: 2; grid-row: 1 / span 3; font-weight: 600; color: var(--pitch); border: 2px solid var(--pitch); padding: .4rem .9rem; border-radius: var(--radius); }
 .match-toggle[aria-expanded="true"] .match-action { background: var(--pitch); color: var(--chalk); }
 .scenes { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; padding: 0 1.3rem 1.3rem; }
+.scenes[hidden] { display: none; }
 .scene { background: var(--pitch-deep); border-radius: var(--radius); overflow: hidden; color: var(--chalk); }
 .scene video { width: 100%; aspect-ratio: 16/9; background: #000; display: block; }
 .scene span { display: block; padding: .5rem .8rem; font-size: .9rem; }
