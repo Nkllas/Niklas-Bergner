@@ -188,7 +188,7 @@ function render() {
         <span class="match-meta">${m.league} · ${plural(m.scenes.length, 'Szene', 'Szenen')}</span>
         <span class="match-action">Szenen</span>
       </button>
-      <div class="scenes" id="${panelId}" hidden></div>`;
+      <div class="scenes" id="${panelId}" hidden style="display: none"></div>`;
 
     const btn = el.querySelector('.match-toggle');
     const panel = el.querySelector('.scenes');
@@ -197,7 +197,6 @@ function render() {
     btn.addEventListener('click', () => {
       const open = btn.getAttribute('aria-expanded') === 'true';
       btn.setAttribute('aria-expanded', String(!open));
-      panel.hidden = open;
       if (!open && !loaded) {
         m.scenes.forEach(([name, file]) => {
           const s = document.createElement('div');
@@ -207,10 +206,36 @@ function render() {
         });
         loaded = true;
       }
+      slide(panel, !open);
     });
 
     list.appendChild(el);
   });
+}
+
+// Sanftes Auf- und Zuklappen der Szenen
+function slide(panel, open) {
+  const from = panel.hidden ? 0 : panel.getBoundingClientRect().height;
+  if (panel._anim) panel._anim.cancel();
+  const finish = () => {
+    panel.hidden = !open;
+    panel.style.display = open ? '' : 'none';
+    panel.style.overflow = '';
+    panel._anim = null;
+  };
+  panel.hidden = false;
+  panel.style.display = '';
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return finish();
+  const full = panel.scrollHeight;
+  const pad = getComputedStyle(panel).paddingBottom;
+  const shut = { height: '0px', paddingBottom: '0px', opacity: 0 };
+  const shown = { height: full + 'px', paddingBottom: pad, opacity: 1 };
+  panel.style.overflow = 'hidden';
+  panel._anim = panel.animate(
+    open ? [{ ...shut, height: from + 'px' }, shown] : [{ ...shown, height: from + 'px' }, shut],
+    { duration: 300, easing: 'cubic-bezier(.2,.7,.2,1)' }
+  );
+  panel._anim.onfinish = finish;
 }
 
 teamSel.addEventListener('change', render);
