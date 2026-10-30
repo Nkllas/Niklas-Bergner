@@ -95,10 +95,11 @@ p { margin: 0 0 1rem; max-width: 65ch; }
 
 /* Ticker */
 .ticker { background: var(--flood); color: var(--pitch-deep); overflow: hidden; white-space: nowrap; }
-.ticker-track { display: inline-flex; animation: ticker 40s linear infinite; }
+.ticker-track { display: inline-flex; animation: ticker 20s linear infinite; }
 .ticker span { font: 700 1.15rem var(--head); text-transform: uppercase; padding: .55rem 1.6rem; position: relative; }
 .ticker span::after { content: "/"; position: absolute; right: -.3rem; opacity: .5; }
-@keyframes ticker { to { transform: translateX(-50%); } }
+/* Der Inhalt steht sechsmal im HTML: eine Runde = ein Sechstel, so bleibt das Band auch auf 4K-Bildschirmen voll */
+@keyframes ticker { to { transform: translateX(calc(-100% / 6)); } }
 
 /* Fakten */
 .facts { margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 2px solid var(--pitch); }
