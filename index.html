@@ -4,12 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Niklas Bergner | Defensives Mittelfeld – ASV Weisendorf</title>
-  <meta name="description" content="Niklas Bergner, Jahrgang 2003: Sechser beim ASV Weisendorf in der Landesliga Bayern Nordost. Karriere, Leistungsdaten, Spielszenen und Kontakt.">
+  <meta name="description" content="Niklas Bergner, Jahrgang 2003: Sechser beim ASV Weisendorf in der Landesliga Bayern Nordost. Karriere, Leistungsdaten und Kontakt.">
   <meta name="theme-color" content="#050b17">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="media/hero.jpg">
   <script>
     // Animationen nur vorbereiten, wenn JavaScript läuft. Falls die Skripte nicht laden,
     // wird nach kurzer Zeit alles sichtbar geschaltet.
@@ -22,16 +21,6 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="top" class="page-home">
-
-<div class="loader" aria-hidden="true">
-  <div class="loader-panel loader-top"></div>
-  <div class="loader-panel loader-bottom"></div>
-  <div class="loader-content">
-    <span class="loader-name">Niklas Bergner</span>
-    <span class="loader-count">00</span>
-  </div>
-</div>
-<div class="grain" aria-hidden="true"></div>
 
 <header class="site-header">
   <a class="brand" href="index.html#top"><span class="brand-mark">NB</span>Niklas Bergner</a>
@@ -48,41 +37,66 @@
 
 <main>
 
-  <!-- HERO: Spielvideo in den Buchstaben, beim Scrollen fliegt man hindurch -->
-  <section class="hero" aria-label="Niklas Bergner">
-    <div class="hero-stage">
-      <video class="hero-video" src="media/hero.mp4" poster="media/hero.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
-      <div class="hero-shade" aria-hidden="true"></div>
-
-      <svg class="hero-mask" aria-hidden="true" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
-        <defs>
-          <mask id="hero-cut" maskUnits="userSpaceOnUse">
-            <rect class="mask-bg" x="-50%" y="-50%" width="200%" height="200%" fill="#fff"/>
-            <g class="mask-zoom">
-              <text class="mask-text" x="800" y="470" font-size="400" textLength="1400" text-anchor="middle" dominant-baseline="central" lengthAdjust="spacingAndGlyphs" fill="#000">BERGNER</text>
-            </g>
-          </mask>
-        </defs>
-        <rect class="mask-fill" x="-50%" y="-50%" width="200%" height="200%" mask="url(#hero-cut)"/>
-      </svg>
-
-      <div class="hero-top">
-        <p class="hero-kicker">Landesliga Bayern Nordost · ASV Weisendorf</p>
-        <p class="hero-first">Niklas</p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="hero-kicker" data-hero>Landesliga Bayern Nordost · ASV Weisendorf</p>
+      <h1 class="hero-name"><span class="hero-line">Niklas</span><span class="hero-line">Bergner</span></h1>
+      <p class="hero-role" data-hero>Sechser · Defensives Mittelfeld</p>
+      <p class="hero-meta" data-hero>Bayern · Deutschland · Jahrgang 2003</p>
+      <div class="hero-actions" data-hero>
+        <a class="btn" href="#karriere">Karriere ansehen</a>
+        <a class="btn btn-ghost" href="https://www.transfermarkt.de/niklas-bergner/profil/spieler/958834" target="_blank" rel="noopener">Transfermarkt-Profil</a>
       </div>
-
-      <div class="hero-info">
-        <h1 class="hero-title">Niklas Bergner</h1>
-        <p class="hero-role">Sechser · Defensives Mittelfeld</p>
-        <p class="hero-meta">Bayern · Deutschland · Jahrgang 2003</p>
-        <div class="hero-actions">
-          <a class="btn" href="#karriere">Karriere ansehen</a>
-          <a class="btn btn-ghost" href="https://www.transfermarkt.de/niklas-bergner/profil/spieler/958834" target="_blank" rel="noopener">Transfermarkt-Profil</a>
-        </div>
-      </div>
-
-      <a class="scroll-cue" href="#statement" aria-label="Weiter scrollen"><span></span></a>
     </div>
+
+    <figure class="board" aria-label="Taktiktafel: Niklas Bergner als Sechser im 4-1-4-1">
+      <svg class="board-pitch" viewBox="0 0 300 440" role="img" aria-hidden="true">
+        <g class="pitch-lines" fill="none" stroke="currentColor" stroke-width="1.6">
+          <rect x="10" y="10" width="280" height="420" rx="2"/>
+          <line x1="10" y1="220" x2="290" y2="220"/>
+          <circle cx="150" cy="220" r="40"/>
+          <rect x="75" y="10" width="150" height="62"/>
+          <rect x="115" y="10" width="70" height="22"/>
+          <path d="M120 72 A 34 34 0 0 0 180 72"/>
+          <rect x="75" y="368" width="150" height="62"/>
+          <rect x="115" y="408" width="70" height="22"/>
+          <path d="M120 368 A 34 34 0 0 1 180 368"/>
+        </g>
+        <g class="pitch-spots" fill="currentColor">
+          <circle cx="150" cy="220" r="2.5"/>
+          <circle cx="150" cy="52" r="2"/>
+          <circle cx="150" cy="388" r="2"/>
+        </g>
+        <!-- Aufstellung 4-1-4-1, Spielrichtung nach oben -->
+        <g class="players">
+          <circle class="mate" cx="150" cy="408" r="7"/>
+          <circle class="mate" cx="52" cy="340" r="7"/>
+          <circle class="mate" cx="116" cy="350" r="7"/>
+          <circle class="mate" cx="184" cy="350" r="7"/>
+          <circle class="mate" cx="248" cy="340" r="7"/>
+          <circle class="mate" cx="48" cy="200" r="7"/>
+          <circle class="mate" cx="116" cy="216" r="7"/>
+          <circle class="mate" cx="184" cy="216" r="7"/>
+          <circle class="mate" cx="252" cy="200" r="7"/>
+          <circle class="mate" cx="150" cy="118" r="7"/>
+        </g>
+        <g class="me">
+          <circle class="me-zone" cx="150" cy="282" r="34"/>
+          <circle class="me-pulse" cx="150" cy="282" r="12"/>
+          <circle class="me-dot" cx="150" cy="282" r="12"/>
+          <text class="me-num" x="150" y="287" text-anchor="middle">6</text>
+        </g>
+      </svg>
+      <figcaption class="board-caption">
+        <span>Aktueller Verein</span>
+        <strong>ASV Weisendorf</strong>
+        <em>Sechser im Zentrum</em>
+      </figcaption>
+    </figure>
+
+    <a class="scroll-cue" href="#profil" aria-label="Weiter zum Profil"><span></span></a>
   </section>
 
   <div class="ticker" aria-hidden="true">
@@ -94,15 +108,8 @@
     </div>
   </div>
 
-  <!-- STATEMENT: Wörter hellen sich beim Scrollen auf -->
-  <section id="statement" class="statement">
-    <div class="wrap">
-      <p class="statement-text" data-words>Absicherung vor der Abwehr. Erster Aufbau nach dem Ballgewinn. Mit 17 in die erste Mannschaft – und seitdem Stammspieler im defensiven Mittelfeld.</p>
-    </div>
-  </section>
-
   <!-- PROFIL -->
-  <section id="profil" class="section section-light rise">
+  <section id="profil" class="section">
     <div class="wrap two-col">
       <div>
         <p class="eyebrow">Profil</p>
@@ -125,51 +132,69 @@
     </div>
   </section>
 
-  <!-- KARRIERE: Stationen laufen beim Scrollen seitlich vorbei -->
-  <section id="karriere" class="career">
-    <div class="career-pin">
-      <div class="career-head wrap">
-        <div>
-          <p class="eyebrow">Karriere</p>
-          <h2 data-split>Stationen</h2>
-        </div>
-        <p class="lead">Vom Nachwuchs in Eltersdorf bis auf die Sechserposition in der Landesliga – vier Stationen, ein Weg.</p>
-      </div>
-      <ol class="career-track">
-        <li class="station"><span class="station-when">Jugend</span><h3>SC Eltersdorf</h3><p class="sub">Nachwuchs</p><p>Die ersten Fußballjahre im Nachwuchs des SC Eltersdorf.</p></li>
-        <li class="station"><span class="station-when">bis 2021</span><h3>TV 1848 Erlangen</h3><p class="sub">U19 · Landesliga Nordwest</p><p>Letzte Nachwuchsstation in Erlangen – der Sprung in den Herrenbereich rückte näher.</p></li>
-        <li class="station"><span class="station-when">2021</span><h3>1. FC Herzogenaurach</h3><p class="sub">Landesliga Bayern Nordost · Herren I · mit 17</p><p>Mit 17 direkt in die erste Mannschaft – und schnell Stammplatz im defensiven Mittelfeld.</p></li>
-        <li class="station"><span class="station-when">2022/23</span><h3>Aufstiegsrennen zur Bayernliga</h3><p class="sub">1. FC Herzogenaurach · Landesliga Bayern Nordost</p><p>Mit dem Team bis zuletzt im Rennen um den Aufstieg in die Bayernliga.</p></li>
-        <li class="station"><span class="station-when">2023/24</span><h3>Abstieg in die Bezirksliga</h3><p class="sub">1. FC Herzogenaurach · Landesliga Bayern Nordost</p><p>Auf das Aufstiegsrennen folgte eine schwierige Saison und der Gang in die Bezirksliga.</p></li>
-        <li class="station"><span class="station-when">2024/25</span><h3>Aufstieg knapp verpasst</h3><p class="sub">1. FC Herzogenaurach · Bezirksliga Mittelfr. Nord</p><p>Direkt der Angriff auf die Rückkehr – der Aufstieg in die Landesliga wurde nur knapp verpasst.</p></li>
-        <li class="station"><span class="station-when">2025/26</span><h3>Aufstieg in die Landesliga</h3><p class="sub">1. FC Herzogenaurach · Bezirksliga Mittelfr. Nord</p><p>Im zweiten Anlauf geschafft: Rückkehr in die Landesliga Bayern Nordost.</p></li>
-        <li class="station current"><span class="station-when">seit 07/2026</span><h3>ASV Weisendorf</h3><p class="sub">Landesliga Bayern Nordost</p><p>Nach dem Aufstieg mit Herzogenaurach der Wechsel nach Weisendorf – als Sechser im Zentrum.</p></li>
-      </ol>
-      <div class="career-bar" aria-hidden="true"><span></span></div>
-    </div>
-  </section>
+  <!-- KARRIERE -->
+  <section id="karriere" class="section section-tint">
+    <div class="wrap">
+      <p class="eyebrow">Karriere</p>
+      <h2 data-split>Stationen</h2>
+      <p class="lead" data-fade>Vom Nachwuchs in Eltersdorf bis auf die Sechserposition in der Landesliga – vier Stationen, ein Weg.</p>
 
-  <!-- ROLLE: große Wortliste läuft beim Scrollen durch -->
-  <section class="roles" aria-labelledby="roles-title">
-    <div class="roles-pin wrap">
-      <div class="roles-head">
-        <p class="eyebrow">Spielerprofil</p>
-        <h2 id="roles-title" class="roles-title">Rolle, Position, Anspruch</h2>
-      </div>
-      <div class="roles-window">
-        <ul class="roles-list">
-          <li><span class="role-word">Sechser</span><p>Defensives Mittelfeld: Absicherung vor der Abwehr, erster Aufbau nach dem Ballgewinn.</p></li>
-          <li><span class="role-word">Achter</span><p>Zentrales Mittelfeld als Nebenposition – zwischen den Linien und im Spiel nach vorn.</p></li>
-          <li><span class="role-word">Mit 17</span><p>Der Sprung aus der U19 direkt in die Landesliga-Mannschaft des 1. FC Herzogenaurach.</p></li>
-          <li><span class="role-word">Stammspieler</span><p>Fünf Jahre gesetzt in Herzogenaurach – vom Aufstiegsrennen zur Bayernliga bis zum Aufstieg in die Landesliga 2025/26.</p></li>
-        </ul>
-      </div>
-      <div class="roles-desc" aria-hidden="true"></div>
+      <ol class="timeline">
+        <li class="timeline-progress" aria-hidden="true"><span></span></li>
+        <li>
+          <span class="when">Jugend</span>
+          <h3>SC Eltersdorf</h3>
+          <p class="sub">Nachwuchs</p>
+          <p>Die ersten Fußballjahre im Nachwuchs des SC Eltersdorf.</p>
+        </li>
+        <li>
+          <span class="when">bis 2021</span>
+          <h3>TV 1848 Erlangen</h3>
+          <p class="sub">U19 · Landesliga Nordwest</p>
+          <p>Letzte Nachwuchsstation in Erlangen – der Sprung in den Herrenbereich rückte näher.</p>
+        </li>
+        <li>
+          <span class="when">2021 · mit 17</span>
+          <h3>1. FC Herzogenaurach</h3>
+          <p class="sub">Landesliga Bayern Nordost · Herren I</p>
+          <p>Mit 17 direkt in die erste Mannschaft – und schnell Stammplatz im defensiven Mittelfeld.</p>
+        </li>
+        <li>
+          <span class="when">2022/23</span>
+          <h3>Aufstiegsrennen zur Bayernliga</h3>
+          <p class="sub">1. FC Herzogenaurach · Landesliga Bayern Nordost</p>
+          <p>Mit dem Team bis zuletzt im Rennen um den Aufstieg in die Bayernliga.</p>
+        </li>
+        <li>
+          <span class="when">2023/24</span>
+          <h3>Abstieg in die Bezirksliga</h3>
+          <p class="sub">1. FC Herzogenaurach · Landesliga Bayern Nordost</p>
+          <p>Auf das Aufstiegsrennen folgte eine schwierige Saison und der Gang in die Bezirksliga.</p>
+        </li>
+        <li>
+          <span class="when">2024/25</span>
+          <h3>Aufstieg knapp verpasst</h3>
+          <p class="sub">1. FC Herzogenaurach · Bezirksliga Mittelfr. Nord</p>
+          <p>Direkt der Angriff auf die Rückkehr – der Aufstieg in die Landesliga wurde nur knapp verpasst.</p>
+        </li>
+        <li>
+          <span class="when">2025/26</span>
+          <h3>Aufstieg in die Landesliga</h3>
+          <p class="sub">1. FC Herzogenaurach · Bezirksliga Mittelfr. Nord</p>
+          <p>Im zweiten Anlauf geschafft: Rückkehr in die Landesliga Bayern Nordost.</p>
+        </li>
+        <li class="current">
+          <span class="when">seit 07/2026</span>
+          <h3>ASV Weisendorf</h3>
+          <p class="sub">Landesliga Bayern Nordost</p>
+          <p>Nach dem Aufstieg mit Herzogenaurach der Wechsel nach Weisendorf – als Sechser im Zentrum.</p>
+        </li>
+      </ol>
     </div>
   </section>
 
   <!-- DATEN -->
-  <section id="daten" class="section section-light rise">
+  <section id="daten" class="section">
     <div class="wrap">
       <div class="section-head">
         <div>
@@ -210,24 +235,34 @@
     </div>
   </section>
 
-  <!-- SPIELSZENEN: Videofenster wächst zum Vollbild -->
-  <section class="reel" aria-labelledby="reel-title">
-    <div class="reel-pin">
-      <div class="reel-frame">
-        <video class="reel-video" src="media/dusk.mp4" poster="media/dusk.jpg" muted loop playsinline preload="metadata" aria-hidden="true"></video>
-        <div class="reel-shade" aria-hidden="true"></div>
-      </div>
-      <div class="reel-copy">
-        <p class="eyebrow">Spielszenen</p>
-        <h2 id="reel-title" class="reel-title">90 Szenen aus 19 Spielen</h2>
-        <p class="reel-text">Ballgewinne, Spieleröffnungen, Tore – sortiert nach Gegner, Liga und Datum.</p>
-        <a class="btn btn-large" href="spielszenen.html">Spielszenen ansehen</a>
+  <!-- SPIELERPROFIL -->
+  <section class="section section-dark">
+    <div class="wrap">
+      <p class="eyebrow">Spielerprofil</p>
+      <h2 data-split>Rolle, Position, Anspruch</h2>
+      <div class="cards" data-stagger>
+        <article>
+          <h3>Defensives Mittelfeld</h3>
+          <p>Der Sechser im Zentrum: Absicherung vor der Abwehr, erster Aufbau nach dem Ballgewinn.</p>
+        </article>
+        <article>
+          <h3>Zentrales Mittelfeld</h3>
+          <p>Nebenposition auf der Achterposition – zwischen den Linien und im Spiel nach vorn.</p>
+        </article>
+        <article>
+          <h3>Mit 17 in der Ersten</h3>
+          <p>Der Sprung aus der U19 direkt in die Landesliga-Mannschaft des 1. FC Herzogenaurach.</p>
+        </article>
+        <article>
+          <h3>Stammspieler</h3>
+          <p>Fünf Jahre gesetzt in Herzogenaurach – vom Aufstiegsrennen zur Bayernliga bis zum Aufstieg in die Landesliga 2025/26.</p>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- GALERIE -->
-  <section id="galerie" class="section section-light rise">
+  <section id="galerie" class="section">
     <div class="wrap">
       <div class="section-head">
         <div>
@@ -248,10 +283,8 @@
   </section>
 
   <!-- KONTAKT -->
-  <section id="kontakt" class="contact">
-    <video class="contact-video" src="media/pitch.mp4" poster="media/pitch.jpg" muted loop playsinline preload="none" aria-hidden="true"></video>
-    <div class="contact-shade" aria-hidden="true"></div>
-    <div class="wrap contact-inner">
+  <section id="kontakt" class="section section-contact">
+    <div class="wrap">
       <p class="eyebrow">Kontakt</p>
       <h2 class="contact-title" data-split>Anfragen willkommen</h2>
       <p class="lead" data-fade>Für sportliche Anfragen, Probetrainings oder ein Gespräch – einfach direkt melden. Ich antworte in der Regel innerhalb weniger Tage.</p>
@@ -285,7 +318,6 @@
       <a href="https://www.fupa.net/player/niklas-bergner-1920566" target="_blank" rel="noopener">FuPa</a>
     </div>
   </div>
-  <p class="footer-mark" aria-hidden="true">Bergner</p>
   <div class="wrap footer-bottom">
     <span>© 2026 Niklas Bergner. Datenstand Oktober 2026.</span>
     <a href="#top">Nach oben</a>
