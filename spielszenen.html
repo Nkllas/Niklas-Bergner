@@ -7,7 +7,15 @@
   <meta name="description" content="Videoszenen von Niklas Bergner – sortiert nach Spiel, Gegner und Datum.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#050b17">
+  <script>
+    document.documentElement.classList.add('js');
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('motion');
+      setTimeout(function () { if (!window.__motionReady) document.documentElement.classList.remove('motion'); }, 3000);
+    }
+  </script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="top" class="page-inner">
@@ -73,7 +81,12 @@
   </div>
 </footer>
 
+<script src="js/vendor/gsap.min.js"></script>
+<script src="js/vendor/ScrollTrigger.min.js"></script>
+<script src="js/vendor/SplitText.min.js"></script>
+<script src="js/vendor/lenis.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/spielszenen.js"></script>
+<script src="js/motion.js"></script>
 </body>
 </html>

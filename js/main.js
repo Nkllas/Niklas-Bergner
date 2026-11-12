@@ -37,6 +37,7 @@ const CONTACT_EMAIL = 'niiikkbuild@gmail.com';
 const dlg = document.createElement('dialog');
 dlg.className = 'contact-dialog';
 dlg.setAttribute('aria-labelledby', 'contact-title');
+dlg.setAttribute('data-lenis-prevent', '');
 dlg.innerHTML = `
   <div class="dialog-inner">
     <button type="button" class="dialog-close" data-close aria-label="Fenster schließen">&times;</button>
@@ -82,6 +83,7 @@ function openContact() {
   status.className = 'form-status';
   document.body.classList.add('dialog-open');
   if (nav) nav.classList.remove('open');
+  if (window.lenis) window.lenis.stop();
   dlg.showModal();
   form.querySelector('input[name="name"]').focus();
 }
@@ -94,7 +96,10 @@ document.addEventListener('click', (e) => {
 dlg.addEventListener('click', (e) => {
   if (e.target === dlg || e.target.closest('[data-close]')) closeContact();
 });
-dlg.addEventListener('close', () => document.body.classList.remove('dialog-open'));
+dlg.addEventListener('close', () => {
+  document.body.classList.remove('dialog-open');
+  if (window.lenis) window.lenis.start();
+});
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -151,41 +156,3 @@ form.addEventListener('submit', async (e) => {
     submitBtn.textContent = 'Anfrage senden';
   }
 });
-
-// ---------- Scroll-Animationen ----------
-// Elemente mit data-reveal erscheinen beim Hereinscrollen und verschwinden
-// wieder, sobald man an ihnen vorbei- bzw. wegscrollt.
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const revealEls = document.querySelectorAll('[data-reveal]');
-
-// Zahlen hochzählen
-function countTo(el, run) {
-  const target = Number(el.dataset.count);
-  const suffix = el.dataset.suffix || '';
-  cancelAnimationFrame(el._raf);
-  if (!run || reduceMotion) { el.textContent = (run ? target : 0) + suffix; return; }
-  const start = performance.now(), dur = 1400;
-  const tick = (now) => {
-    const t = Math.min((now - start) / dur, 1);
-    const eased = 1 - Math.pow(1 - t, 3);
-    el.textContent = Math.round(target * eased) + suffix;
-    if (t < 1) el._raf = requestAnimationFrame(tick);
-  };
-  el._raf = requestAnimationFrame(tick);
-}
-
-if (revealEls.length && 'IntersectionObserver' in window) {
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const inView = entry.isIntersecting;
-      entry.target.classList.toggle('in-view', inView);
-      entry.target.querySelectorAll('[data-count]').forEach((n) => countTo(n, inView));
-    });
-  }, { threshold: 0.2, rootMargin: '0px 0px -8% 0px' });
-  revealEls.forEach((el) => {
-    el.querySelectorAll('[data-count]').forEach((n) => countTo(n, false));
-    io.observe(el);
-  });
-} else {
-  revealEls.forEach((el) => el.classList.add('in-view'));
-}
